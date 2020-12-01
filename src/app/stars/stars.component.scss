@@ -1,0 +1,39 @@
+.stars {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+
+    .star {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #b4b4b4;
+        background: #ddd;
+        margin: 0 8px 24px;
+        cursor: pointer;
+
+        &.active {
+            background-color: yellow;
+        }
+
+        &.hover-star {
+            background-color: lighten(yellow, 10);
+        }
+
+        &.default {
+            background-color: #ddd;
+        }
+    }
+}
+
+.text-message {
+    width: 50%;
+    margin: 0 auto;
+    background: lightgray;
+    padding: 16px;
+    border-radius: 5px;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}

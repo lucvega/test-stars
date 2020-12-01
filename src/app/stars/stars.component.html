@@ -1,0 +1,17 @@
+<div class="stars">
+    <div 
+      *ngFor="let star of stars; index as i"
+      class="star" 
+      (mouseenter)="onMouseEnter(i)" 
+      (mouseleave)="onMouseLeave()"
+      (click)="checkStar(i)"
+      [ngClass]="{
+                  'active' : star <= starActive, 
+                  'hover-star' : star <= starHover, 
+                  'default' : (starHover != null && star > starHover)
+                }"
+      >
+    </div>
+  
+    <p class="text-message">You are selecting the star number <b>{{starActive}}</b></p>
+</div>
